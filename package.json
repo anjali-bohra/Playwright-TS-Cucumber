@@ -6,25 +6,39 @@
   "scripts": {
     "pretest": "npx ts-node src/utility/init.ts",
     "test": "cross-env ENV=prod cucumber-js test",
-    "report": "npx ts-node src/utility/report.ts",
-    "test:failed": "cucumber-js -p rerun @rerun.txt"
+    "report": "npx ts-node src/utility/reporter/report.ts",
+     "test:failed": "cucumber-js -p rerun @rerun.txt",
+    "allure":"npx allure serve allure-results"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@playwright/test": "^1.41.2",
-    "@types/node": "^20.11.16",
-    "@cucumber/cucumber": "^10.3.1",
-    "cross-env": "^7.0.3",
-    "cucumber-html-reporter": "^7.1.1",
-    "dotenv": "^16.4.1",
-    "fs-extra": "^11.2.0",
-    "multiple-cucumber-html-reporter": "^3.6.1",
-    "ts-node": "^10.9.2"
-  },
-  "dependencies": {
-    "uuid": "^9.0.1"
-  }
-  }
-
+"author": "",
+"license": "ISC",
+ "devDependencies": {
+ "@cucumber/cucumber": "^10.3.1",
+ "@playwright/test": "^1.42.0",
+ "@types/node": "^20.11.17",
+ "allure-cucumberjs": "^2.13.0",
+ "allure-js-commons": "^2.13.0",
+ "allure-playwright": "^2.13.0",
+ "cross-env": "^7.0.3",
+ "cucumber-html-reporter": "^7.1.1",
+ "dotenv": "^16.4.1",
+ "fs-extra": "^11.2.0",
+ "multiple-cucumber-html-reporter": "^3.6.1",
+ "ts-node": "^10.9.2",
+ "winston": "^3.11.0"
+ },
+ "dependencies": {
+ "@faker-js/faker": "^8.4.1",
+ "@types/pg": "^8.11.0",
+ "axios": "^1.6.7",
+ "chai": "^5.1.0",
+ "log4js": "^6.9.1",
+ "mocha": "^10.3.0",
+ "mochawesome": "^7.1.3",
+ "pg": "^8.11.3",
+ "properties-reader": "^2.3.0",
+ "rimraf": "^5.0.5",
+ "uuid": "^9.0.1"
+ }
+}
