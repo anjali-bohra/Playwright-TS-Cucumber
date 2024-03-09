@@ -1,6 +1,6 @@
 Feature: Registration
    
-
+@smoke
   Scenario Outline: User should be able to do a successful registration
     Given User navigates to the application
     And user clicks on register link
@@ -13,7 +13,7 @@ Feature: Registration
       | harvey   | sepcter  | harvey12@test.com | pass@123 |
       | donna    | paulsen  | donna12@test.com  | pass@123 |
 
-
+@regression
   Scenario: User should be able to do a successful registration by reading data from json file
     Given User navigates to the application
     And user clicks on register link
